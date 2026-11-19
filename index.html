@@ -2,6 +2,7 @@
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>小水滴破圈指南</title>
 <style>
 @page { size: A4; margin: 16mm 15mm 18mm 15mm;
@@ -93,6 +94,23 @@ a{color:var(--orange-deep)}
 .tight .card{padding:3mm 4mm}
 .tight .say{margin:.8mm 0}
 .tight .box{margin:2mm 0}
+
+@media screen {
+  body{max-width:210mm;margin:0 auto;padding:0 0 12mm;background:#fff}
+  section{padding:0 6mm;margin-top:10mm}
+  .cover{width:100%;height:auto;min-height:100vh;max-height:297mm}
+  .cover .inner{position:relative;left:auto;right:auto;top:auto;padding:22vh 8mm 0}
+  .cover .foot{position:relative;left:auto;right:auto;bottom:auto;margin:14mm 8mm 0;padding-bottom:10mm}
+}
+@media screen and (max-width:720px) {
+  body{font-size:15px}
+  .cover h1{font-size:34pt}
+  .cover .sub{font-size:13pt}
+  .grid2,.issues,.who-sec .bio{grid-template-columns:1fr}
+  .heart{grid-template-columns:1fr 1fr}
+  .src{columns:1}
+  section img{width:100% !important;height:auto !important}
+}
 </style>
 </head>
 <body>
@@ -293,7 +311,7 @@ a{color:var(--orange-deep)}
 
 <section class="pb">
   <h2><span class="no"><span>八</span></span>聊天流程圖</h2>
-  <p class="lead" style="margin-bottom:2mm">把前面幾節串起來，聊天時照著走就好。這張圖也可以單獨存到手機：<a href="https://github.com/nomoneynohoney/xiaoshuidi-guide/raw/main/chat-flow.png">chat-flow.png ↗</a></p>
+  <p class="lead" style="margin-bottom:2mm">把前面幾節串起來，聊天時照著走就好。這張圖也可以單獨存到手機：<a href="https://nomoneynohoney.github.io/xiaoshuidi-guide/chat-flow.png">chat-flow.png ↗</a></p>
   <img src="chat-flow.png" alt="小水滴聊天流程圖" style="display:block;margin:0 auto;height:228mm;width:auto">
 </section>
 
@@ -331,7 +349,8 @@ a{color:var(--orange-deep)}
   <h2><span class="no"><span>＋</span></span>最新版本與原始檔</h2>
   <p style="margin:0 0 2mm">這份指南放在 GitHub 公開倉庫，有 PDF 和 Markdown 兩種格式，之後的更新也會放在這裡：</p>
   <p style="font-size:12pt;font-weight:700;margin:0 0 2mm"><a href="https://github.com/nomoneynohoney/xiaoshuidi-guide">github.com/nomoneynohoney/xiaoshuidi-guide ↗</a></p>
-  <p style="margin:0 0 2mm">PDF 直接下載：<a href="https://github.com/nomoneynohoney/xiaoshuidi-guide/raw/main/xiaoshuidi-guide.pdf">xiaoshuidi-guide.pdf ↗</a></p>
+  <p style="margin:0 0 2mm">網頁版：<a href="https://nomoneynohoney.github.io/xiaoshuidi-guide/">nomoneynohoney.github.io/xiaoshuidi-guide ↗</a></p>
+  <p style="margin:0 0 2mm">PDF 版：<a href="https://nomoneynohoney.github.io/xiaoshuidi-guide/xiaoshuidi-guide.pdf">xiaoshuidi-guide.pdf ↗</a></p>
   <p class="note" style="margin:0">版本 V1.1.0・2026-11-19</p>
 </section>
 <div style="margin-top:8mm;padding:4mm 5mm;background:var(--orange);color:#fff;border-radius:2mm;page-break-inside:avoid;position:relative;overflow:hidden">

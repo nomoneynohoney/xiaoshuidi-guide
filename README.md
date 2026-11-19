@@ -6,13 +6,15 @@
 
 ## 📥 下載
 
-**👉 [PDF 直接下載](https://github.com/nomoneynohoney/xiaoshuidi-guide/raw/main/xiaoshuidi-guide.pdf)**
+**👉 [網頁版（手機最好讀）](https://nomoneynohoney.github.io/xiaoshuidi-guide/)**
+
+**👉 [PDF 版](https://nomoneynohoney.github.io/xiaoshuidi-guide/xiaoshuidi-guide.pdf)**
 
 - 📝 Markdown 版：[小水滴破圈指南.md](./小水滴破圈指南.md)（可直接在 GitHub 上閱讀、複製）
-- 🗺️ 聊天流程圖：[chat-flow.png](./chat-flow.png)（[直接下載](https://github.com/nomoneynohoney/xiaoshuidi-guide/raw/main/chat-flow.png)，可存到手機或傳到 LINE）
+- 🗺️ 聊天流程圖：[chat-flow.png](./chat-flow.png)（[直接下載](https://nomoneynohoney.github.io/xiaoshuidi-guide/chat-flow.png)，可存到手機或傳到 LINE）
 - 📣 推廣文案：[推廣文案.md](./推廣文案.md)（傳給其他支持者用）
 
-> 在 LINE 內建預覽裡如果點不了連結，請用「以其他應用程式開啟」換到瀏覽器或 PDF 閱讀器。
+> 網頁版和 PDF 都能直接在瀏覽器打開。在 LINE 內建瀏覽器打不開的話，請點右上角選「以預設瀏覽器開啟」。
 
 ## 這是什麼
 
