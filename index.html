@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>小水滴破圈指南</title>
+<style>
+@page { size: A4; margin: 16mm 15mm 18mm 15mm;
+  @bottom-left { content: "支持者自發製作，非沈伯洋競選總部官方文件"; font-family:"Noto Sans CJK TC",sans-serif; font-size:7.5pt; color:#7A6F68; }
+  @bottom-right { content: "小水滴破圈指南 V1.0.0　" counter(page) " / " counter(pages); font-family:"Noto Sans CJK TC",sans-serif; font-size:7.5pt; color:#D9600B; }
+}
+@page:first { margin: 0; }
+:root{
+  --orange:#F27A1A; --orange-deep:#D9600B; --orange-soft:#FFF1E4; --orange-line:#FBD3AE;
+  --ink:#2B2522; --muted:#7A6F68; --green:#2E9E6A; --green-soft:#E8F5EE; --red:#C8432F; --red-soft:#FCEBE7;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans CJK TC",sans-serif;color:var(--ink);font-size:10.4pt;line-height:1.7;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+/* cover */
+.cover{height:297mm;width:210mm;position:relative;overflow:hidden;background:var(--orange);color:#fff;page-break-after:always}
+.cover .lines{position:absolute;inset:0}
+.cover .inner{position:absolute;left:20mm;right:20mm;top:62mm}
+.cover .kicker{font-size:12pt;letter-spacing:.3em;font-weight:500;opacity:.9}
+.cover h1{font-size:40pt;line-height:1.2;margin:8mm 0 4mm;font-weight:900;letter-spacing:.02em}
+.cover .sub{font-size:15pt;font-weight:500;line-height:1.6}
+.cover .tag{display:inline-block;margin-top:12mm;background:#fff;color:var(--orange-deep);font-weight:700;padding:2.5mm 6mm;border-radius:1mm;font-size:12pt}
+.cover .foot{position:absolute;left:20mm;right:20mm;bottom:22mm;font-size:10.5pt;line-height:1.8;border-top:1px solid rgba(255,255,255,.55);padding-top:5mm}
+.cover .foot b{font-weight:700}
+/* content */
+h2{font-size:17pt;font-weight:900;margin:0 0 4mm;padding:0 0 2mm 0;position:relative;color:var(--ink);page-break-after:avoid}
+h2 .no{display:inline-block;background:var(--orange);color:#fff;font-size:11pt;padding:.6mm 3mm;margin-right:3mm;vertical-align:4px;transform:skewX(-12deg)}
+h2 .no span{display:inline-block;transform:skewX(12deg)}
+h2::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:linear-gradient(90deg,var(--orange) 0 30%,var(--orange-line) 30% 100%)}
+section{margin-bottom:9mm}
+.lead{color:var(--muted);margin:0 0 4mm}
+.say{background:var(--orange-soft);border-left:3px solid var(--orange);padding:1mm 3mm;border-radius:0 1.5mm 1.5mm 0;display:block;margin:1.2mm 0}
+.bubble{display:inline-block;background:#fff;border:1.5px solid var(--orange);border-radius:4mm 4mm 4mm 1mm;padding:1.2mm 3.5mm;margin:1mm 0;font-weight:500}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.steps>li{counter-increment:s;position:relative;padding:0 0 3mm 11mm;page-break-inside:avoid}
+ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.3mm;width:7mm;height:7mm;background:var(--orange);color:#fff;font-weight:900;text-align:center;line-height:7mm;transform:skewX(-12deg)}
+ol.steps>li b.t{font-size:11pt}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.card{border:1px solid var(--orange-line);border-radius:2mm;padding:3.5mm 4mm;page-break-inside:avoid;background:#fff}
+.card h3{margin:0 0 2mm;font-size:12pt;font-weight:900;color:var(--orange-deep)}
+.issue{border:1px solid var(--orange-line);border-radius:2mm;margin-bottom:4mm;page-break-inside:avoid;overflow:hidden}
+.issue .hd{background:var(--orange);color:#fff;font-weight:900;font-size:12pt;padding:1.6mm 4mm;position:relative}
+.issue .hd::after{content:"";position:absolute;right:0;top:0;bottom:0;width:30mm;background:repeating-linear-gradient(115deg,rgba(255,255,255,.0) 0 3mm,rgba(255,255,255,.22) 3mm 4mm)}
+.issue .bd{padding:2.5mm 4mm 3mm}
+.issue .now{font-size:9pt;line-height:1.6;color:var(--muted);margin-bottom:2mm}
+.issue .cmp{display:grid;grid-template-columns:1fr;gap:2mm;font-size:9.4pt;line-height:1.6}
+.issues{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.issues .issue{margin-bottom:0}
+.issue .cmp div{background:#FAF8F6;border-radius:1.5mm;padding:2mm 3mm}
+.issue .cmp div.puma{background:var(--orange-soft)}
+.issue .cmp .who{font-weight:700;font-size:9pt;color:var(--muted);display:block}
+.issue .cmp .puma .who{color:var(--orange-deep)}
+.issue .go{margin-top:2mm;font-size:9.4pt;line-height:1.6;border-top:1px dashed var(--orange-line);padding-top:2mm}
+.issue .go b{color:var(--green)}
+.chk{color:#fff;background:var(--muted);font-size:8pt;padding:0 1.5mm;border-radius:1mm;font-weight:700;white-space:nowrap}
+.chk.no{background:var(--red)}
+.qa{page-break-inside:avoid;margin-bottom:3.5mm}
+.qa .q{font-weight:900;font-size:10.8pt}
+.qa .q::before{content:"對方說";font-size:8pt;font-weight:700;background:var(--ink);color:#fff;padding:.3mm 1.5mm;margin-right:2mm;border-radius:1mm;vertical-align:2px}
+.note{font-size:9.4pt;color:var(--muted)}
+.box{border-radius:2mm;padding:3.5mm 4.5mm;margin:3mm 0;page-break-inside:avoid}
+.box.green{background:var(--green-soft);border-left:4px solid var(--green)}
+.box.red{background:var(--red-soft);border-left:4px solid var(--red)}
+.box h4{margin:0 0 1.5mm;font-size:11pt}
+.box.red h4{color:var(--red)} .box.green h4{color:var(--green)}
+ul{margin:0;padding-left:5mm} li{margin:.6mm 0}
+ul.dash{list-style:none;padding:0} ul.dash li{padding-left:5mm;position:relative} ul.dash li::before{content:"";position:absolute;left:0;top:2.6mm;width:3mm;height:2px;background:var(--orange)}
+.src{font-size:8.4pt;color:var(--muted);columns:2;column-gap:6mm}
+.src a{color:var(--orange-deep);text-decoration:underline;text-underline-offset:2px}
+.src a::after{content:" ↗";font-size:7.5pt}
+.src li{break-inside:avoid}
+a{color:var(--orange-deep)}
+.issue .ask{font-size:9.6pt;font-weight:700;margin-bottom:1.5mm}
+.issue .ask::before{content:"可以問：";color:var(--green)}
+.issue .pm{background:var(--orange-soft);border-radius:1.5mm;padding:2mm 3mm;font-size:9.4pt;line-height:1.6}
+.issue .pm .who{font-weight:700;font-size:9pt;color:var(--orange-deep);display:block}
+.issue .pm ul{padding-left:4mm;margin:0} .issue .pm li{margin:.3mm 0}
+.issue .why{font-size:9.2pt;margin-top:1.8mm;line-height:1.6}
+.issue .why b{color:var(--orange-deep)}
+.issue .ref{font-size:8.4pt;color:var(--muted);margin-top:1.8mm;border-top:1px dashed var(--orange-line);padding-top:1.5mm;line-height:1.5}
+.who-sec .bio{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.heart{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm;margin:2mm 0 1mm}
+.heart div{background:var(--orange-soft);border-top:3px solid var(--orange);border-radius:1.5mm;padding:2mm;font-size:8.8pt;line-height:1.5}
+.heart b{display:block;font-size:13pt;color:var(--orange-deep);line-height:1.2}
+.heart i{font-style:normal;font-weight:700;display:block;margin-bottom:.8mm}
+
+.pb{page-break-before:always}
+.tight{font-size:9.8pt;line-height:1.6}
+.tight ol.steps>li{padding-bottom:1.5mm}
+.tight .card{padding:3mm 4mm}
+.tight .say{margin:.8mm 0}
+.tight .box{margin:2mm 0}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <svg class="lines" viewBox="0 0 210 297" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#fff" stroke-linecap="round" fill="none">
+      <line x1="95" y1="20" x2="230" y2="-28" stroke-width="7" opacity=".18"/>
+      <line x1="110" y1="38" x2="230" y2="-5" stroke-width="3" opacity=".3"/>
+      <line x1="-20" y1="250" x2="230" y2="160" stroke-width="14" opacity=".12"/>
+      <line x1="-20" y1="268" x2="230" y2="178" stroke-width="3" opacity=".35"/>
+      <line x1="40" y1="292" x2="230" y2="224" stroke-width="6" opacity=".2"/>
+      <line x1="120" y1="300" x2="230" y2="260" stroke-width="2" opacity=".45"/>
+    </g>
+  </svg>
+  <div class="inner">
+    <div class="kicker">2026 台北市長選舉・支持者指南</div>
+    <h1>小水滴<br>破圈指南</h1>
+    <div class="sub">一人找一位台北市民、還不支持 Puma 的朋友，<br>在 LINE 上一對一聊聊，請他給沈伯洋一次說明的機會。</div>
+    <div class="tag">一滴一位朋友　｜　不吵架，好好講政見</div>
+  </div>
+  <div class="foot">
+    <b>使用期間</b>　11/19 – 11/27　｜　<b>投票日</b>　11/28（六），當天不能拉票<br>
+    <b>你的任務</b>　找一位還不支持 Puma 的台北朋友，認真聊一次。<br><b>對象</b>　設籍台北、有投票權的市民。不是台北選民就先跳過，時間有限。<br>
+    <span style="display:inline-block;margin-top:2mm;background:rgba(255,255,255,.18);padding:1mm 3mm;border-radius:1mm;font-weight:700">本指南由支持者自發製作，非沈伯洋競選總部官方文件。</span><br><span style="opacity:.8">版本 V1.0.0・2026-11-19</span>
+  </div>
+</div>
+
+<section class="who-sec pb">
+  <h2><span class="no"><span>一</span></span>先認識 Puma：沈伯洋是誰</h2>
+  <div class="bio">
+    <div class="card"><h3>經歷</h3>
+      <ul class="dash">
+        <li>1982 年生，在台北五分埔長大。</li>
+        <li>台大法律系、法研所；美國賓州大學法學碩士；加州大學爾灣分校犯罪與法律社會學博士。</li>
+        <li>當過律師，早年在補習班教刑法用的名字是「撲馬」，Puma 這個暱稱就是從這裡來的。</li>
+        <li>國立臺北大學犯罪學研究所副教授。</li>
+        <li>2024 年起擔任立法委員，2026 年參選台北市長。</li>
+      </ul>
+    </div>
+    <div class="card"><h3>他想讓台北變成什麼樣子</h3>
+      <p style="margin:0 0 1.5mm">他的看法是：台北人每個都很努力，但城市的腳步沒跟上，所以市府應該多陪伴、多分擔。台北已經從「沒有」走到「有」，接下來要從「有」走到「好」，重點是一點一點改善，不是大破大立。</p>
+      <p style="margin:0">口號是<b style="color:var(--orange-deep)">「台北順起來」</b>：讓長輩多一點照顧、孩子多一點陪伴、夾在中間的三明治世代有人接住。</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:4mm"><h3>五大政見主軸：HEART</h3>
+    <div class="heart">
+      <div><b>H</b><i>空間</i>婚育宅、青年宅、更多綠蔭和公園、河岸與山徑</div>
+      <div><b>E</b><i>機會</i>幫市民培養能力、創造發展機會</div>
+      <div><b>A</b><i>陪伴</i>照顧長輩、陪伴孩子、支援家長</div>
+      <div><b>R</b><i>安心</i>城市韌性、身心健康、兒少安全</div>
+      <div><b>T</b><i>時間</i>目標每天替台北人省下 30 分鐘</div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:4mm"><h3>上任 100 天先做的三件事</h3>
+    <ul class="dash">
+      <li><b>把樹種回來：</b>用專責單位、專法、專款，恢復城市綠蔭，打造都市微森林。</li>
+      <li><b>兒虐防治：</b>事證屬實就要求機構停業或相關人員停職，及時救援、安置孩子，市府當社工和幼保員的後盾。</li>
+      <li><b>改善營養午餐。</b></li>
+    </ul>
+    <p class="note" style="margin:2mm 0 0">他的做事方式是「你說我做」：先蒐集市民意見（「市長，你給我聽好了」平台、街頭肥皂箱），再提出解法。</p>
+  </div>
+</section>
+
+<section class="pb">
+  <h2><span class="no"><span>二</span></span>四大心法</h2>
+  <div class="grid2">
+    <div class="card"><h3>共榮共好，絕不吵架</h3>對方不是敵人，是同一座城市的鄰居。對方一激動，我們就打住，不糾纏，換下一位。不要連朋友都做不成。</div>
+    <div class="card"><h3>先聽對方在意什麼</h3>先問對方住台北最在意的是什麼，聽完再講。再分享 Puma 在這件事上的政見，請對方自己看看。</div>
+    <div class="card"><h3>只談市政，不談黨和意識形態</h3>遇到統獨或強烈意識形態的話題，跳過就好，不糾纏，換個話題或換下一位。</div>
+    <div class="card"><h3>講政見，不貼標籤</h3>重點放在 Puma 打算怎麼做、為什麼這樣做，不批評、不標籤化現任。講清楚具體做法，讓對方自己判斷。</div>
+  </div>
+</section>
+
+<section class="pb">
+  <h2><span class="no"><span>三</span></span>一段聊天的五個步驟</h2>
+  <p class="lead">打字聊天和面對面不一樣：對方隨時可以已讀不回，長訊息也不會被讀完。所以一次只傳一則短訊息，等對方回了再接下一步。</p>
+  <ol class="steps">
+    <li><b class="t">開場</b>：一對一私訊，先從生活聊起。<br><span class="bubble">想問你一下，住台北你覺得最麻煩的是什麼？</span></li>
+    <li><b class="t">聆聽</b>：等對方回完，不打斷、不糾正，也不要連發好幾則。可以問一句：<br><span class="bubble">這個困擾你多久了？</span></li>
+    <li><b class="t">分享 Puma 的做法</b>：從第四節找到對方在意的那一題，說 Puma 打算怎麼做、為什麼。<br><span class="bubble">你說的這件事，Puma 的想法是○○，因為○○。</span></li>
+    <li><b class="t">附上原始政見</b>：讓對方自己看原文。先寫一句自己的話，不要只丟連結。<br><span class="bubble">這是他的政見原文，有空可以看看：puma.taipei/policies</span></li>
+    <li><b class="t">收尾</b>：不要求對方表態，也不要求轉傳。<br><span class="bubble">不用急著決定，有空看一下兩個人的政見會，比較看看就好。</span></li>
+  </ol>
+</section>
+
+<section class="pb">
+  <h2><span class="no"><span>四</span></span>市政議題卡</h2>
+  <p class="lead">每張卡片先寫一句可以問對方的話，再寫 Puma 的做法和理由，最後一行附上現任的做法供參考。完整政見以 <a href="https://puma.taipei/policies">puma.taipei/policies</a> 為準。</p>
+  <div class="issues">
+  <div class="issue"><div class="hd">內湖交通</div><div class="bd">
+    <div class="ask">「你通勤都卡在哪一段？」</div>
+    <div class="pm"><span class="who">Puma 怎麼做</span><ul><li>捷運環狀線東環段，和內湖交通的配套一起設計</li><li>民生汐止線先從汐止端蓋 4 站，民生社區那一端多和居民溝通，保留社區特色</li></ul></div>
+    <div class="why"><b>為什麼：</b>塞車不能只靠一條捷運解決，路線和周邊配套要一起規劃。</div><div class="ref">現任做法：提出松山機場遷建，原址規劃台北 AI 園區。</div>
+  </div></div>
+  <div class="issue"><div class="hd">綠色通勤</div><div class="bd">
+    <div class="ask">「你每天通勤要花多久？」</div>
+    <div class="pm"><span class="who">Puma 怎麼做</span><ul><li>TPASS 納入共享電動機車</li><li>串起自行車通勤路網；通勤時段 YouBike 電輔車前 30 分鐘免費</li><li>通學區共同標準、公車安全改革</li><li>捷運站、登山口設運動驛站，可寄物、換衣、沖洗</li></ul></div>
+    <div class="why"><b>為什麼：</b>讓走路、公車、腳踏車、機車都成為真正方便的選項，補上最後一哩路，替大家省下時間。</div><div class="ref">現任做法：雙北公車 399 定期票。Puma 說過，399 如果是好政策，他上任也可以做。</div>
+  </div></div>
+  <div class="issue"><div class="hd">居住</div><div class="bd">
+    <div class="ask">「你身邊的年輕人租得起房子嗎？」</div>
+    <div class="pm"><span class="who">Puma 怎麼做</span><ul><li>婚育宅、青年宅</li><li>多元興辦社宅、包租代管</li><li>老宅延壽：行動服務團到宅協助，降低公共區域修繕門檻</li></ul></div>
+    <div class="why"><b>為什麼：</b>讓年輕人和新婚家庭住得起台北，也讓還不能重建的老房子住得安全。</div><div class="ref">現任做法：盤點社宅潛力基地，持續興建社宅。</div>
+  </div></div>
+  <div class="issue"><div class="hd">都市更新</div><div class="bd">
+    <div class="ask">「你家附近有卡住的都更案嗎？卡在哪裡？」</div>
+    <div class="pm"><span class="who">Puma 怎麼做</span><ul><li>「無限都更」：政府先在公有地蓋好新宅</li><li>住戶用舊屋換新屋，或換新屋的地上權；依估價多退少補，需要補差額的有貸款協助</li><li>住戶只要搬一次家，騰出的舊基地再接著更新下一輪</li></ul></div>
+    <div class="why"><b>為什麼：</b>很多都更卡在住戶要搬兩次、資訊不對稱。他主張資訊公開透明，讓住戶看得懂、算得清楚。</div><div class="ref">現任做法：降低公辦都更門檻、提高大街廓都更容積獎勵。</div>
+  </div></div>
+  <div class="issue"><div class="hd">育兒</div><div class="bd">
+    <div class="ask">「你或身邊朋友帶小孩，最缺的是什麼？」</div>
+    <div class="pm"><span class="who">Puma 怎麼做</span><ul><li>增加免費臨托時數和臨托據點（細節請看政見連結）</li><li>親子同行卡</li><li>0–6 歲腸病毒疫苗免費</li><li>「家庭一站通」：托育補助、兒童發展、孕前孕後、心理支持，一個窗口處理</li><li>兒少安全治理機制，預防兒虐</li></ul></div>
+    <div class="why"><b>為什麼：</b>他認為臨托不只是緊急時才需要，而是讓家長每週固定有時間喘口氣、照顧自己。</div><div class="ref">現任做法：提高生育獎勵、第二胎公托與準公托免費、校校有公托、新生兒臨托券等。</div>
+  </div></div>
+  <div class="issue"><div class="hd">長者與長照</div><div class="bd">
+    <div class="ask">「家裡長輩的照顧，現在是誰在扛？」</div>
+    <div class="pm"><span class="who">Puma 怎麼做</span><ul><li>用社宅、都更和閒置空間，增加長照與住宿型機構</li><li>外籍照顧人力接受 2 年專業培訓，補足人手</li><li>彈性臨時托老券，減輕失智、失能長者家庭的負擔</li><li>敬老卡升級，用在社交和運動；健身小巴進社區</li><li>在宅醫療、到宅修繕、擴大爬梯機服務</li></ul></div>
+    <div class="why"><b>為什麼：</b>讓長輩在熟悉的社區安心生活、多和人來往，也讓照顧長輩的家人有喘息空間。</div><div class="ref">現任做法：提高敬老卡點數並可累計，擴大使用範圍。</div>
+  </div></div>
+  <div class="issue"><div class="hd">身心健康</div><div class="bd">
+    <div class="ask">「你最近有好好照顧自己嗎？」</div>
+    <div class="pm"><span class="who">Puma 怎麼做</span><ul><li>15–65 歲每年 6 次心理諮商</li><li>50 歲以上帶狀疱疹疫苗，市府補助一劑（低收、中低收維持兩劑全額補助）</li><li>使用呼吸器、製氧機的家庭，補助家用備援電力</li></ul></div>
+    <div class="why"><b>為什麼：</b>從生理、心理到安全，替市民建一張照護網，讓人在城市裡不孤單。</div>
+  </div></div>
+  <div class="issue"><div class="hd">市府怎麼聽市民</div><div class="bd">
+    <div class="ask">「你覺得市府有在聽你講話嗎？」</div>
+    <div class="pm"><span class="who">Puma 怎麼做</span><ul><li>「市長，你給我聽好了」平台，持續蒐集市民意見</li><li>街頭肥皂箱：市民站上去直接提問</li><li>市政 debug 松，一起找問題、想解法</li><li>改善公務員工作環境，讓市府有人力把事情做好</li></ul></div>
+    <div class="why"><b>為什麼：</b>他的原則是「你說我做」：先聽市民遇到什麼問題，再提出解法。</div><div class="ref">現任做法：主打「說到做到」，以大巨蛋、輝達進駐北士科為代表政績。</div>
+  </div></div>
+  </div>
+</section>
+
+<section class="pb">
+  <h2><span class="no"><span>五</span></span>常見反應怎麼接</h2>
+  <div class="qa"><div class="q">「你們綠的都一樣。」</div><span class="say">我懂，所以今天不談黨，只想聽你對台北哪件事最不滿意。</span></div>
+  <div class="qa"><div class="q">「沈伯洋立場太極端。」</div><span class="say">這個我尊重你的看法。不過市長要處理的是你家門口的事，可以給我一分鐘講這部分嗎？</span><div class="note">對方不想聽，就謝謝他，換下一位。</div></div>
+  <div class="qa"><div class="q">「蔣萬安做得不錯啊。」</div><span class="say">對，像○○他確實有做。如果你願意，我也想分享 Puma 在這方面的政見，你可以比較看看。</span></div>
+  <div class="qa"><div class="q">「無限都更聽起來不可行。」</div><span class="say">這題很多人在討論。它的設計是住戶自願選擇換屋或換權，有估價機制，價差多退少補。細節確實還要再看，你最擔心的是哪一點？</span><div class="note">自己說不清楚的話，就把官方管道給對方，或是先查清楚再回他。</div></div>
+  <div class="qa"><div class="q">「投誰都一樣。」</div><span class="say">我懂那種感覺。不過有些議題，像長照、托育、租屋，兩邊的做法真的不太一樣，對家裡的長輩、小孩、剛出社會的朋友都有影響。有空可以比較看看。</span></div>
+  <div class="qa"><div class="q">對方開始談統獨或意識形態</div><span class="say">謝謝你的指教。</span><div class="note">到這裡就好，不糾纏，換個話題或換下一位。</div></div>
+
+  <div class="box green">
+    <h4>私訊聊天的分寸</h4>
+    <ul class="dash">
+      <li>對方幾小時沒回，不要追問或連發。等他回，或隔天再自然地聊。</li>
+      <li>一則訊息講一件事。超過手機一個畫面的長文，不好閱讀。</li>
+      <li>朋友的問題和想法記在自己手機裡就好，不要整理成名單、截圖對話傳出去。那是朋友的個人資料，也是他對你的信任。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pb tight">
+  <h2><span class="no"><span>六</span></span>我們不是候選人：答不出來，就交給 Puma 本人</h2>
+  <p class="lead">我們是支持者，不是候選人，也不是政策幕僚。被問倒很正常，硬答反而容易講錯。我們的任務不是替 Puma 回答每一個問題，而是<b style="color:var(--orange-deep)">讓對方願意給他本人一次機會，親自聽他講</b>。</p>
+  <ol class="steps">
+    <li><b class="t">誠實說不知道</b><br><span class="bubble">這個問題問得很好，老實說我不太清楚細節，不想亂講誤導你。</span><br>不知道就說不知道，不要硬拗。</li>
+    <li><b class="t">把問題記下來</b><br><span class="bubble">我把你的問題記下來，查清楚再回你。</span><br>把對方的問題記在自己手機裡，查到答案再回他。（只給自己看，不要傳給別人。）</li>
+    <li><b class="t">請對方直接聽本人講</b><br><span class="bubble">與其聽我轉述，不如直接聽他本人怎麼說，你再自己判斷。</span></li>
+  </ol>
+
+  <div class="card" style="margin-top:3mm">
+    <h3>可以傳給對方的管道</h3>
+    <ul class="dash">
+      <li><b>政見總覽：</b><a href="https://puma.taipei/policies">puma.taipei/policies</a></li>
+      <li><b>「市長，你給我聽好了」LINE 平台：</b>市民可以留言提問，也能看其他人的意見，適合對方說「我有話想講」的時候。對方覺得這是同溫層取暖的話，可以補一句：Puma 說留言提到蔣萬安的不到 1%，大多是垃圾桶、公車這類生活問題。</li>
+      <li><b>公辦政見會、電視辯論的完整影片：</b>兩位候選人在同一個場合各講 30 分鐘。請對方兩個人的都看，比較起來最公平。</li>
+      <li><b>實體市民對話活動：</b>Puma 辦過讓市民站上肥皂箱、直接提問、當場回答的活動。最後幾天如果還有場次，可以約對方一起去，自己問。</li>
+    </ul>
+    <p class="note" style="margin:2mm 0 0">先把這些連結存在 LINE 的 Keep 或記事本裡，對方有興趣時馬上就能傳。只傳官方帳號或主流媒體的完整影片，不要傳剪輯過的片段。</p>
+  </div>
+
+  <div class="card" style="margin-top:4mm">
+    <h3>請對方給一次機會</h3>
+    <span class="say">你不一定要支持他，只是希望你兩個人都聽過，再做決定。</span>
+    <span class="say">我講得不好沒關係，但請不要因為我講不好，就不給他一個說明的機會。</span>
+    <span class="say">你看完如果還是覺得蔣萬安比較好，我也尊重。</span>
+  </div>
+
+  <div class="box red">
+    <h4>不要做的事</h4>
+    不要為了圓場而編答案、猜數字，或替 Puma 做他沒說過的承諾。講錯了，對對方也不公平。
+  </div>
+</section>
+
+<section class="pb">
+  <h2><span class="no"><span>七</span></span>紅線</h2>
+  <div class="box red" style="margin-top:0">
+    <ul class="dash">
+      <li>不要標籤化蔣市長，也不傳嘲諷梗圖、影片。</li>
+      <li>不轉傳沒查證的數字，不剪輯、變造對方的影片或照片。深偽內容要負法律責任。</li>
+      <li>投票日前十天內不發布、不轉傳民調，現在已經進入這段期間。</li>
+      <li>11/28 投票日當天不拉票，所有溝通在 11/27 結束。</li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="pb">
+  <h2><span class="no"><span>＋</span></span>資料來源</h2>
+  <p class="note" style="margin:0 0 2mm">點標題可以直接開啟原文。</p>
+  <ul class="src">
+    <li><a href="https://www.bnext.com.tw/article/92598/2026-nine-in-one-elections-voting-guide">選舉日程：數位時代</a></li>
+    <li><a href="https://www.mirrormedia.mg/story/20260907cul006">沈伯洋小檔案與年表：鏡週刊</a></li>
+    <li><a href="https://www.nownews.com/news/6892324">沈伯洋政見發表會全文：NOWnews</a></li>
+    <li><a href="https://news.nextapple.com/politics/20261114/2DC0EA4EF634C18AB1FA356021FCD88D">政見發表會：壹蘋新聞網</a></li>
+    <li><a href="https://www.nownews.com/news/6864870">五大政見 HEART：NOWnews</a></li>
+    <li><a href="https://udn.com/news/story/124652/9683613">HEART 首場政見發布：聯合報</a></li>
+    <li><a href="https://www.businesstoday.com.tw/article/category/183027/post/202610310006/">上任 100 天三件事：今周刊</a></li>
+    <li><a href="https://newtalk.tw/news/view/2026-08-26/1055724">都市林政策：新頭殼</a></li>
+    <li><a href="https://www.nownews.com/news/6875465">綠色通勤政見：NOWnews</a></li>
+    <li><a href="https://www.mirrormedia.mg/external/setn_1898889">談內湖、民汐線：鏡週刊／三立</a></li>
+    <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5638157">沈伯洋回應 399：自由時報</a></li>
+    <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5632815">老宅延壽、多元社宅：自由時報</a></li>
+    <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5633640">無限都更步驟：自由時報</a></li>
+    <li><a href="https://newtalk.tw/news/view/2026-06-23/1042858">臨托政見：新頭殼</a></li>
+    <li><a href="https://newtalk.tw/news/view/2026-09-11/1059220">全齡社福、長照政見：新頭殼</a></li>
+    <li><a href="https://tw.news.yahoo.com/%E5%8F%B0%E5%8C%97%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E6%9C%83-%E6%B2%88%E4%BC%AF%E6%B4%8B%E6%8B%8B%E5%AE%89%E5%BF%83%E7%85%A7%E8%AD%B7%E7%B6%B2-%E6%8E%A8%E7%96%AB%E8%8B%97%E8%A3%9C%E5%8A%A9-15%E8%87%B365%E6%AD%B2%E5%B9%B46%E6%AC%A1%E5%BF%83%E7%90%86%E8%AB%AE%E5%95%86-084139171.html">安心照護網、心理諮商：自由時報／Yahoo</a></li>
+    <li><a href="https://www.nownews.com/news/6892347">蔣萬安政見發表會全文：NOWnews</a></li>
+    <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5638241">雙北公車 399 定期票：自由時報</a></li>
+    <li><a href="https://news.ltn.com.tw/news/politics/breakingnews/5633268">都發局說明社宅：自由時報</a></li>
+    <li><a href="https://news.pts.org.tw/article/801527">北市育兒新政：公視</a></li>
+    <li><a href="https://udn.com/news/story/6656/9752760">敬老卡：聯合報</a></li>
+    <li><a href="https://news.pts.org.tw/article/834975">松山機場遷建：公視</a></li>
+    <li><a href="https://city.gvm.com.tw/article/134190">首場電視辯論：遠見</a></li>
+  </ul>
+</section>
+
+<section style="page-break-inside:avoid">
+  <h2><span class="no"><span>＋</span></span>最新版本與原始檔</h2>
+  <p style="margin:0 0 2mm">這份指南放在 GitHub 公開倉庫，有 PDF 和 Markdown 兩種格式，之後的更新也會放在這裡：</p>
+  <p style="font-size:12pt;font-weight:700;margin:0 0 2mm"><a href="https://github.com/nomoneynohoney/xiaoshuidi-guide">github.com/nomoneynohoney/xiaoshuidi-guide ↗</a></p>
+  <p style="margin:0 0 2mm">PDF 直接下載：<a href="https://github.com/nomoneynohoney/xiaoshuidi-guide/raw/main/xiaoshuidi-guide.pdf">xiaoshuidi-guide.pdf ↗</a></p>
+  <p class="note" style="margin:0">版本 V1.0.0・2026-11-19</p>
+</section>
+<div style="margin-top:8mm;padding:4mm 5mm;background:var(--orange);color:#fff;border-radius:2mm;page-break-inside:avoid;position:relative;overflow:hidden">
+  <div style="position:absolute;right:0;top:0;bottom:0;width:45mm;background:repeating-linear-gradient(115deg,rgba(255,255,255,0) 0 4mm,rgba(255,255,255,.2) 4mm 5.5mm)"></div>
+  <div style="font-size:12pt;font-weight:900">製作：@Marc Liu</div>
+  <div style="font-size:10pt">歡迎修改、散佈以及轉製，請註明出處。本作品以 CC BY 4.0 授權。</div>
+</div>
+</body>
+</html>
