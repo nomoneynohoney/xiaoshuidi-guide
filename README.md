@@ -50,6 +50,7 @@ google-chrome --headless --no-pdf-header-footer --print-to-pdf=xiaoshuidi-guide.
 
 ## 版本
 
+- **V1.1.0**（2026-11-19）：新增聊天流程圖（第八章與獨立圖檔 chat-flow.png）
 - **V1.0.0**（2026-11-19）：首版
 
 ## 授權
